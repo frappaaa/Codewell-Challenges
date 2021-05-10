@@ -1,5 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+$green: #003345;
+$borderRadius: 10px;
+
 body {
   background-image: url(../Assets/Background.png);
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  place-content: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  h1,
+  h2 {
+    font-weight: 700;
+  }
+  h3 {
+    font-weight: 400;
+    color: #65b1c6;
+  }
+
+  a {
+    color: $green;
+    font-weight: 700;
+  }
   main {
     max-width: 700px;
     margin: 0 auto;
@@ -9,9 +35,56 @@ body {
     align-items: flex-start;
     flex-direction: row;
     flex-wrap: nowrap;
+    border: 1px solid grey;
+    border-radius: $borderRadius;
     section {
-      img {
-        max-width: 300px;
+      &:first-child {
+        background-color: $green;
+        color: #fff;
+        text-align: center;
+        border-top-left-radius: $borderRadius;
+        border-bottom-left-radius: $borderRadius;
+        img {
+          height: 300px;
+          width: 350px;
+          max-width: 350px;
+          max-height: 500px;
+          object-fit: cover;
+          object-position: bottom;
+        }
+      }
+      &:nth-child(2) {
+        height: 100%;
+        background-color: #fff;
+        border-top-right-radius: $borderRadius;
+        border-bottom-right-radius: $borderRadius;
+        padding: 0 20px;
+
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          input {
+            padding: 15px;
+            border: 1px solid grey;
+            border-radius: $borderRadius/2;
+            &[type="checkbox"] {
+            }
+          }
+          button {
+            background-color: $green;
+            padding: 15px;
+            color: #fff;
+            border-radius: $borderRadius/2;
+            border: 0;
+            font-weight: 700;
+            cursor: pointer;
+          }
+          label:nth-child(1),
+          label:nth-child(2) {
+            font-weight: 700;
+          }
+        }
       }
     }
   }
