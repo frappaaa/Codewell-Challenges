@@ -30,24 +30,21 @@ body {
     max-width: 700px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
-    align-content: center;
-    align-items: flex-start;
     flex-direction: row;
-    flex-wrap: nowrap;
     border: 1px solid grey;
     border-radius: $borderRadius;
     overflow: hidden;
+    flex-basis: auto;
     section {
-      width: 100%;
       &:first-child {
+        width: 100%;
         background-color: $green;
         color: #fff;
         text-align: center;
         img {
-          height: 300px;
-          width: 350px;
-          max-width: 350px;
+          height: 350px;
+          width: 250px;
+          max-width: 250px;
           max-height: 500px;
           object-fit: cover;
           object-position: bottom;
@@ -87,7 +84,9 @@ body {
 }
 
 @media (max-width: 768px) {
-  main {
-    flex-direction: column;
+  body {
+    main {
+      flex-direction: column;
+    }
   }
 }
